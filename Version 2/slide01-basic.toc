@@ -1,4 +1,3 @@
-\beamer@sectionintoc {1}{مبانی}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{متن ساده}{3}{0}{1}
-\beamer@sectionintoc {2}{لیست‌های بدون شماره و با شماره}{4}{0}{2}
-\beamer@sectionintoc {3}{کار با تصویر و جدول}{8}{0}{3}
+\beamer@sectionintoc {1}{مقدمه}{3}{0}{1}
+\beamer@sectionintoc {2}{مفاهیم اولیه}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{زنجیرهٔ مارکوف}{7}{0}{2}

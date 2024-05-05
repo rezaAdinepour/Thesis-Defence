@@ -120,7 +120,124 @@ displaymathdigits=default % persian
 
 
 
+% ---------------------------------------
+% frame options
+% ---------------------------------------
 
+% \setbeamerfont{section name}{family=\TitrFont}
+\setbeamerfont{section title}{family=\TitrFont,size=\huge}
+\setbeamerfont{subsection title}{size=\Large}
+% \setbeamerfont{frametitle}{family=\TitrFont}
+\setbeamerfont{title}{family=\TitrFont}
+\setbeamerfont{subtitle}{family=\NormalFont}
+
+% \setbeamertemplate{section in toc}[circle]
+% \setbeamertemplate{frametitle continuation}{\gdef\beamer@frametitle{}} % framebreaks without numbering
+\setbeamertemplate{frametitle}[default][center]% align the frametitle to the center
+\setbeamertemplate{caption}[numbered]{}% Number float-like environments
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt \hbox{\donotcoloroutermaths$\blacktriangleleft$}} % Correct the bullet for RTL texts
+\setbeamertemplate{enumerate item}[circle] % ball or circle
+
+%\setbeamersize{text margin left=5mm,text margin right=10mm}
+
+
+%%% تصحیح  \subsection و \subsubsection در فهرست مطالب
+\makeatletter
+\expandafter\let\csname beamer@@tmpop@subsection in toc@default\endcsname\relax
+\expandafter\let\csname beamer@@tmpop@subsubsection in toc@default\endcsname\relax
+\defbeamertemplate*{subsection in toc}{default}
+{\leavevmode\rightskip=1.5em\inserttocsubsection\par}
+
+\defbeamertemplate*{subsubsection in toc}{default}
+{\leavevmode\normalsize\usebeamerfont{subsection in toc}\rightskip=3em%
+	\usebeamerfont{subsubsection in toc}\inserttocsubsubsection\par}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% تصحیح دستورات \frametitle و \framesubtitle برای قرار دادن عنوان و زیرعنوان یک frame استفاده کنیم:
+\makeatletter
+\define@key{beamercolbox}{left}[0pt]{\def\beamer@colbox@rs{0pt}\def\beamer@colbox@ls{#1 plus1fill}}
+\makeatother
+
+
+
+
+
+
+\makeatother
+
+% hide navigation bar
+\beamertemplatenavigationsymbolsempty
+
+% fix allowframebreaks numbering
+\setbeamertemplate{frametitle continuation}{ - \insertcontinuationcount}
+
+\makeatletter
+% reset footnot counter per new page
+% \@newctr{footnote}[page]
+\makeatother
+
+
+\makeatother
+
+% hide navigation bar
+\beamertemplatenavigationsymbolsempty
+
+% fix allowframebreaks numbering
+\setbeamertemplate{frametitle continuation}{ - \insertcontinuationcount}
+
+\makeatletter
+% reset footnot counter per new page
+% \@newctr{footnote}[page]
+\makeatother
+
+
+% دستور های لازم برای تعریف ترجمهٔ دستورات الگوریتم
+\makeatletter
+% تعریف محیط بدون headline
+\newenvironment{withoutheadline}{
+	\setbeamertemplate{headline}[default]
+	\def\beamer@entrycode{\vspace*{-\headheight}}
+}{}
+\makeatother
+
+% برای درج عدد به جای شکل در beamer
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\renewcommand{\sectionname}{قسمت}
+\renewcommand{\subsectionname}{زیرقسمت}
+\def\subsubsectionname{\translate{Subsubsection}}
+\def\insertsubsubsectionnumber{\arabic{subsubsection}}
+%\def\subsubsectionpage{\usebeamertemplate*{subsubsection page}}
+\AtBeginSection{\frame{\sectionpage}}
+%\AtBeginSubsection{\frame{\subsectionpage}}
+%\AtBeginSubsubsection{\frame{\subsubsectionpage}}
+
+
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% تصحیح مشکل پانویس footnote
+
+\makeatletter
+\bidi@undef\beamer@@tmpop@footnote@default
 
 
 
@@ -280,136 +397,233 @@ displaymathdigits=default % persian
 	\tableofcontents
 \end{frame}
 
+
+
+
+
+\section{مقدمه}
+\begin{frame}
+	\frametitle{مقدمه}
+	
+	\begin{columns}[onlytextwidth]
+		\setbeamercolor{alerted text}{fg=red}
+		\setbeamerfont{alerted text}{series=\bfseries}
+		\setbeamercovered{transparent}
+		\begin{column}{.4\textwidth}
+			% \raggedleft
+			\begin{enumerate}
+				\item نمونه از یک لیست دولایه در کنار یک تصویر
+				\begin{enumerate}[<1>]
+					\item در این لیست موارد زیادی می‌تواند قرار بگیرد
+					\item مثلاً
+					\item $\cdots$
+					
+				\end{enumerate}
+			\end{enumerate}
+		\end{column}
+		\begin{column}{.6\textwidth}
+			% \raggedleft
+			\begin{enumerate}
+				\item این مورد برای یک ترکیب دولایه ای آماده شده
+				\begin{enumerate}
+					\item<1> این مورد فقط در قسمت اول دیده می‌شود
+					\item \alert<2>{این مورد تأکیدی در صفحهٔ دوم دیده می‌شود}
+					\item<1> موارد بیشتر
+					
+				\end{enumerate}
+			\end{enumerate}
+			\begin{figure}
+				% \includegraphics[width=\textwidth]{./img/social-sais.jpg}
+				\vspace{-1em}
+				\includegraphics[height=0.35\textheight]{img/logo-ce.png}
+				\caption{اولین تصویر }
+			\end{figure}
+		\end{column}
+		% \begin{column}{.01\textwidth}\end{column}
+	\end{columns}
+	
+\end{frame}
+
+
+
+
+
+
+
+
+
+\section{مفاهیم اولیه}
+\subsection{زنجیرهٔ مارکوف}
+\begin{frame}
+	\frametitle{زنجیرهٔ مارکوف}
+	
+	زنجیرهٔ مارکوف\LTRfootnote{Markov Chain}
+	\begin{enumerate}
+		\item مدلی برای توصیف توالی رخدادهای احتمالی (\textbf{فرایند تصادفی}\LTRfootnote{Stochastic process})
+		\item احتمال هر رخداد فقط به وضعیت رخداد قبلی خود وابسته (\textbf{بدون حافظه}\LTRfootnote{Memory less})
+		\item قابل تعریف در دو حالت: زمان گسسته و زمان پیوسته
+	\end{enumerate}
+	% \begin{eqnarray}
+		%     \label{eqn:discreate-time-markov-chain}
+		%     \Pr(X_{n+1}=x\mid X_{1}=x_{1},X_{2}=x_{2},\ldots ,X_{n}=x_{n})=\Pr(X_{n+1}=x\mid X_{n}=x_{n}) \\
+		%     \label{eqn:continous-time-markov-chain}
+		%     \Pr(X_{t_{n+1}}=i_{n+1}\mid X_{t_{0}}=i_{0},X_{t_{1}}=i_{1},\ldots ,X_{t_{n}}=i_{n})=p_{i_{n}i_{n+1}}(t_{n+1}-t_{n})
+		% \end{eqnarray}
+	\pause
+	\begin{table}
+		\caption{حالت‌های معروف برای مدل مارکوف}
+		\vspace{0em}
+		\small
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{حالت‌ها}       & \textbf{زمان پیوسته}       & \textbf{زمان گسسته}        \\
+			\hline
+			\textbf{وضعیت گسسته}  & فرایند مارکوف              & زنجیره مارکوف              \\
+			\hline
+			\textbf{وضعیت پیوسته} & فرایند مارکوف وضعیت پیوسته & زنجیره مارکوف وضعیت پیوسته \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+\end{frame}
+
+
+
+
 % To adjust the paragraphs in RTL
-\everypar{\rightskip\rightmargin}
+%\everypar{\rightskip\rightmargin}
 %-------------------------------------------------------------------------------
-\begin{frame}{سرآغاز}
-\section{مبانی}
-\subsection{متن ساده}
-این یک نمونه بسیار ساده از اسلاید است که با بیمر و زی‌پرشین ساخته شده‌است.
-
-از فونت آزاد Roya XB برای این اسلاید استفاده شده‌است. این فونت در اینترنت موجود است و باید روی کامپیوتر شما نصب شده باشد یا در فولدر قابل دسترس برای زی‌لاتک باشد
-
-تنظیمات اندکی در بخش آغازین برای اصلاح لیست‌ها و عنوان اسلایدها اضافه شده است. همچنین نحوه شماره‌گذاری تصاویر و جدول‌ها تنظیم شده‌است.
-
-بسیاری از تم‌های استاندارد بیمر با این الگو قابل استفاده است.
-
-استفاده از پانویس توصیه نمی شود. سفارش می‌شود که جدول فهرست مطالب به شکل دستی باشد. این اسلاید با بسیاری از تم‌های بیمر کار میکند اگرچه ممکن است اشکالاتی وجود داشته باشد.
-\end{frame}
-
-%-------------------------------------------------------------------------------
-\section{لیست‌های بدون شماره و با شماره}
-%-------------------------------------------------------------------------------
-\begin{frame}{استفاده از لیست‌های بدون شماره}
-
-استفاده از محیط لیست‌های بدون شماره در این‌جا آورده شده است. به نحوه راست چین نمودن لیست در فایل tex دقت نمایید.
-\begin{itemize}\RTList
-	\item مورد اول
-	\item مورد دوم
-	\item مورد سوم که یک متن طولانی تر است\\ ما چند خط در اینجا آورده‌ایم
-	\item مورد آخر
-\end{itemize}
-\end{frame}
+%\begin{frame}{سرآغاز}
+%\section{مبانی}
+%\subsection{متن ساده}
+%این یک نمونه بسیار ساده از اسلاید است که با بیمر و زی‌پرشین ساخته شده‌است.
+%
+%از فونت آزاد Roya XB برای این اسلاید استفاده شده‌است. این فونت در اینترنت موجود است و باید روی کامپیوتر شما نصب شده باشد یا در فولدر قابل دسترس برای زی‌لاتک باشد
+%
+%تنظیمات اندکی در بخش آغازین برای اصلاح لیست‌ها و عنوان اسلایدها اضافه شده است. همچنین نحوه شماره‌گذاری تصاویر و جدول‌ها تنظیم شده‌است.
+%
+%بسیاری از تم‌های استاندارد بیمر با این الگو قابل استفاده است.
+%
+%استفاده از پانویس توصیه نمی شود. سفارش می‌شود که جدول فهرست مطالب به شکل دستی باشد. این اسلاید با بسیاری از تم‌های بیمر کار میکند اگرچه ممکن است اشکالاتی وجود داشته باشد.
+%\end{frame}
 
 %-------------------------------------------------------------------------------
-\begin{frame}{استفاده از محیط شماره‌گذاری}
- استفاده از محیط لیست (itemize) و شماره‌گذاری (enumerate) بصورت ترکیبی در این‌جا آورده شده است
- \begin{enumerate}\RTList
-      \item سطح یک - مورد اول
-	      \begin{itemize}\RTList
-	      		\item  سطح دوم - مورد اول
-	     		 \item  سطح دوم - مورد دوم
-	      \end{itemize}
-      \item سطح یک - مورد دو
-      \item سطح یک - مورد سه
- \end{enumerate}
+%\section{لیست‌های بدون شماره و با شماره}
+%%-------------------------------------------------------------------------------
+%\begin{frame}{استفاده از لیست‌های بدون شماره}
+%
+%استفاده از محیط لیست‌های بدون شماره در این‌جا آورده شده است. به نحوه راست چین نمودن لیست در فایل tex دقت نمایید.
+%\begin{itemize}\RTList
+%	\item مورد اول
+%	\item مورد دوم
+%	\item مورد سوم که یک متن طولانی تر است\\ ما چند خط در اینجا آورده‌ایم
+%	\item مورد آخر
+%\end{itemize}
+%\end{frame}
+%
+%%-------------------------------------------------------------------------------
+%\begin{frame}{استفاده از محیط شماره‌گذاری}
+% استفاده از محیط لیست (itemize) و شماره‌گذاری (enumerate) بصورت ترکیبی در این‌جا آورده شده است
+% \begin{enumerate}\RTList
+%      \item سطح یک - مورد اول
+%	      \begin{itemize}\RTList
+%	      		\item  سطح دوم - مورد اول
+%	     		 \item  سطح دوم - مورد دوم
+%	      \end{itemize}
+%      \item سطح یک - مورد دو
+%      \item سطح یک - مورد سه
+% \end{enumerate}
+%
+%این یک پاراگراف ساده پارسی بعد از محیط شماره‌گذاری است.
+%\end{frame}
+%
+%
+%%-------------------------------------------------------------------------------
+%\begin{frame}{استفاده از رنگ و متن انگلیسی در اسلاید پارسی}
+%در این اسلاید نحوه استفاده از رنگ از بسته xecolor و نیز محیط LTR برای نوشتن متن پارسی آمده‌است.
+%\vspace{1cm}
+%
+%{\xecolor{green}
+%	استفاده از \textbf{رنگ} و متن انگلیسی در داخل اسلاید پارسی
+%}
+%\vspace{1cm}
+%{\xecolor{red}
+%	\begin{LTR}
+%		This is an English Paragraph inside a Persian slide!\\
+%		Another line of latin text.
+%	\end{LTR}
+%}
+%
+%\end{frame}
+%
+%
+%%-------------------------------------------------------------------------------
+%\begin{frame}
+%\frametitle{معادلات ریاضی}
+%چنانکه ملاحظه می‌شود عنوان در بیمر + زی‌پرشین به درستی کار می‌کند
+%\vspace{2cm}
+%\begin{equation}
+%\int_{a}^{b} f(x)dx = \frac{\lambda x^2 + \gamma x + \beta}{1+\sum_{n=1}^{m+2} 3 \alpha x^2 +x_n \sin(2 x_n -1)}
+%\end{equation}
+%
+%\end{frame}
+%
+%%------------------------------------------
+%% Tables and Pictures
+%%------------------------------------------
+%\section{کار با تصویر و جدول}
+%
+%%------------------------------------------
+%\begin{frame}
+%\frametitle{شکل‌ها}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.4\linewidth]{settings-blue.pdf}
+%	\caption[نمونه تصویر]{چگونگی درج یک تصور در بیمر+زی‌پرشین}
+%	\label{fig:pic1}
+%\end{figure}
+%\end{frame}
+%
+%
+%%-------------------------------------------------------------------------------
+%\begin{frame}{جداول در بیمر و زی‌پرشین}
+%\begin{table}
+%\caption{نمونه متن در جدول فارسی}
+%\begin{tabular}{|c|c|c|c|}
+%	\hline 
+%خانه اول	& خانه وسط جدول &خانه سمت راست    \\ 
+%	\hline 
+%ردیف دوم	&  ردیف دوم خانه دوم& ردیف دوم خانه سوم   \\ 
+%	\hline 
+%ردیف سوم	&
+%$ y=\int_{a}^{b\gamma+\epsilon} f(x) dx $
+%& ردیف سوم آخر   \\ 
+%	\hline 
+%\end{tabular} 
+%\end{table}
+%\end{frame}
+%
+%%-------------------------------------------------------------------------------
+%\begin{frame}{اسلاید پایانی}
+%در نسخه بعدی این اسلاید موارد زیر  آمده‌است: استفاده از فونت‌های فارسی آزاد که مناسب اسلاید هستند، متن‌های چند ستونی، لیست‌های رنگی و ...
+%
+%کد منبع این اسلاید در آدرس زیر موجود است
+%\begin{itemize}\RTList
+%	\item \href{https://github.com/kookma/Persian-Beamer-Templates}{Github/kookma}
+%\end{itemize}
+%
+%\begin{alertblock}{نکته مهم}
+%	این اسلاید با انجام برخی تنظیمات تهیه شده است زیرا بسته زی‌پرشین هنوز بطور کامل با بیمر سازگار نیست. در سایت 
+%	\href{http://qa.parsilatex.com}{پرسش و پاسخ پارسی لاتک}
+% روش‌های سیستماتیک و مناسب‌تری توسط توسعه دهنده زی‌پرشین ارایه شده‌است.
+%\end{alertblock}
+%
+%
+%\end{frame}
+%
 
-این یک پاراگراف ساده پارسی بعد از محیط شماره‌گذاری است.
-\end{frame}
 
 
-%-------------------------------------------------------------------------------
-\begin{frame}{استفاده از رنگ و متن انگلیسی در اسلاید پارسی}
-در این اسلاید نحوه استفاده از رنگ از بسته xecolor و نیز محیط LTR برای نوشتن متن پارسی آمده‌است.
-\vspace{1cm}
-
-{\xecolor{green}
-	استفاده از \textbf{رنگ} و متن انگلیسی در داخل اسلاید پارسی
-}
-\vspace{1cm}
-{\xecolor{red}
-	\begin{LTR}
-		This is an English Paragraph inside a Persian slide!\\
-		Another line of latin text.
-	\end{LTR}
-}
-
-\end{frame}
-
-
-%-------------------------------------------------------------------------------
-\begin{frame}
-\frametitle{معادلات ریاضی}
-چنانکه ملاحظه می‌شود عنوان در بیمر + زی‌پرشین به درستی کار می‌کند
-\vspace{2cm}
-\begin{equation}
-\int_{a}^{b} f(x)dx = \frac{\lambda x^2 + \gamma x + \beta}{1+\sum_{n=1}^{m+2} 3 \alpha x^2 +x_n \sin(2 x_n -1)}
-\end{equation}
-
-\end{frame}
-
-%------------------------------------------
-% Tables and Pictures
-%------------------------------------------
-\section{کار با تصویر و جدول}
-
-%------------------------------------------
-\begin{frame}
-\frametitle{شکل‌ها}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\linewidth]{settings-blue.pdf}
-	\caption[نمونه تصویر]{چگونگی درج یک تصور در بیمر+زی‌پرشین}
-	\label{fig:pic1}
-\end{figure}
-\end{frame}
-
-
-%-------------------------------------------------------------------------------
-\begin{frame}{جداول در بیمر و زی‌پرشین}
-\begin{table}
-\caption{نمونه متن در جدول فارسی}
-\begin{tabular}{|c|c|c|c|}
-	\hline 
-خانه اول	& خانه وسط جدول &خانه سمت راست    \\ 
-	\hline 
-ردیف دوم	&  ردیف دوم خانه دوم& ردیف دوم خانه سوم   \\ 
-	\hline 
-ردیف سوم	&
-$ y=\int_{a}^{b\gamma+\epsilon} f(x) dx $
-& ردیف سوم آخر   \\ 
-	\hline 
-\end{tabular} 
-\end{table}
-\end{frame}
-
-%-------------------------------------------------------------------------------
-\begin{frame}{اسلاید پایانی}
-در نسخه بعدی این اسلاید موارد زیر  آمده‌است: استفاده از فونت‌های فارسی آزاد که مناسب اسلاید هستند، متن‌های چند ستونی، لیست‌های رنگی و ...
-
-کد منبع این اسلاید در آدرس زیر موجود است
-\begin{itemize}\RTList
-	\item \href{https://github.com/kookma/Persian-Beamer-Templates}{Github/kookma}
-\end{itemize}
-
-\begin{alertblock}{نکته مهم}
-	این اسلاید با انجام برخی تنظیمات تهیه شده است زیرا بسته زی‌پرشین هنوز بطور کامل با بیمر سازگار نیست. در سایت 
-	\href{http://qa.parsilatex.com}{پرسش و پاسخ پارسی لاتک}
- روش‌های سیستماتیک و مناسب‌تری توسط توسعه دهنده زی‌پرشین ارایه شده‌است.
-\end{alertblock}
-
-
-\end{frame}
 
 \end{persian}
 \end{document}
