@@ -1,5 +1,7 @@
 \beamer@sectionintoc {1}{مقدمه}{3}{0}{1}
 \beamer@sectionintoc {2}{مفاهیم اولیه}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{عمر باقی‌مانده مفید}{6}{0}{2}
-\beamer@sectionintoc {3}{مبانی}{8}{0}{3}
-\beamer@subsectionintoc {3}{1}{متن ساده}{9}{0}{3}
+\beamer@subsectionintoc {2}{1}{اولین زمان پیش‌بینی (FPT) و زمان پایان عمر (EOL)}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{عمر باقی‌مانده مفید}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{ساختار ترنسفرمر}{10}{0}{2}
+\beamer@sectionintoc {3}{مبانی}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{متن ساده}{12}{0}{3}
