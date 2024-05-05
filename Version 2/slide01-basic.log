@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2024.5.4)  5 MAY 2024 09:45
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2024.5.4)  5 MAY 2024 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1704,61 +1704,53 @@ Overfull \hbox (11.3783pt too wide) in paragraph at lines 392--392
 
 ]
 LaTeX Font Info:    Font shape `TU/IRTitr.ttf(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 404.
+(Font)              scaled to size 20.74pt on input line 407.
  [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 445
-.
+File: img/img1.png Graphic file (type bmp)
+<img/img1.png>
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+Overfull \vbox (11.03256pt too high) detected at line 437
+ []
+
+[4
+
+] [5
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 480
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 445
+LaTeX Font Info:    Trying to load font information for U+msb on input line 480
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 445.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 445.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 445.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 445.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 445.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 445.
-File: img/logo-ce.png Graphic file (type bmp)
-<img/logo-ce.png>
-
-Overfull \hbox (5.34666pt too wide) detected at line 445
-  [][] $[]$[][][][][][][][] $[]$[][][][][][]
- []
-
-[4
-
-]
-File: img/logo-ce.png Graphic file (type bmp)
-<img/logo-ce.png>
-
-Overfull \hbox (5.34666pt too wide) detected at line 445
-  [][] $[]$[][][][][][][][] $[]$[][][][][][]
- []
-
-[5
-
-] [6
-
-]
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 488.
- [7
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 480.
+ [6
+
+] [7
 
 ] [8
+
+] [9
 
 ]
 \tf@nav=\write6
@@ -1770,21 +1762,22 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
 \tf@snm=\write8
 \openout8 = `slide01-basic.snm'.
 
- (./slide01-basic.aux)
+
+(./slide01-basic.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `slide01-basic.out' has not changed.
-(rerunfilecheck)             Checksum: D588A9CA92D00D2C9DC89382F5D6C805;391.
+(rerunfilecheck)             Checksum: B5D5B2371767B4FDA2DE5EDF0F56193E;595.
  ) 
 Here is how much of TeX's memory you used:
- 33355 strings out of 474878
- 722480 string characters out of 5762517
- 1940627 words of memory out of 5000000
- 54547 multiletter control sequences out of 15000+600000
+ 33331 strings out of 474878
+ 721521 string characters out of 5762517
+ 1938627 words of memory out of 5000000
+ 54522 multiletter control sequences out of 15000+600000
  567830 words of font info for 146 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,19n,123p,3218b,1460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,3218b,1061s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slide01-basic.pdf (8 pages).
+Output written on slide01-basic.pdf (9 pages).
