@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2024.5.4)  5 MAY 2024 21:06
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2024.5.4)  5 MAY 2024 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,16 +1819,17 @@ Overfull \vbox (35.64561pt too high) detected at line 497
 File: img/img3.png Graphic file (type bmp)
 <img/img3.png>
 
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 619--619
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 616--616
 [][][][] 
  []
 
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 619.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 616.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 619.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 616.
 
-Overfull \vbox (6.58728pt too high) detected at line 619
+Overfull \hbox (16.0862pt too wide) in alignment at lines 616--616
+ [][][] []
  []
 
 [6
@@ -1837,30 +1838,43 @@ Overfull \vbox (6.58728pt too high) detected at line 619
 File: img/img3.png Graphic file (type bmp)
 <img/img3.png>
 
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 619--619
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 616--616
 [][][][] 
  []
 
 
-Overfull \vbox (6.58728pt too high) detected at line 619
+Overfull \hbox (16.0862pt too wide) in alignment at lines 616--616
+ [][][] []
  []
 
 [7
 
 ]
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 663--663
+File: img/img4.png Graphic file (type bmp)
+<img/img4.png>
+
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 670--670
 [][][][] 
  []
 
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 663.
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 663.
+File: img/img5.png Graphic file (type bmp)
+<img/img5.png>
+
+\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 670--670
+[][][][] 
+ []
+
+
+Overfull \vbox (10.12608pt too high) detected at line 670
+ []
+
 [8
 
 ]
-\endL or \endR problem (0 missing, 1 extra) in paragraph at lines 663--663
-[][][][] 
+File: img/img6.png Graphic file (type bmp)
+<img/img6.png>
+
+Overfull \vbox (1.50145pt too high) detected at line 718
  []
 
 [9
@@ -1868,8 +1882,6 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <7> not available
 ] [10
 
 ] [11
-
-] [12
 
 ]
 \tf@nav=\write6
@@ -1887,15 +1899,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `slide01-basic.out' has not changed.
-(rerunfilecheck)             Checksum: 1EE8E9E23002A9C417B99A16959E40D8;1237.
+(rerunfilecheck)             Checksum: 8FE096467C8ECF30F6387C458760B602;1236.
  ) 
 Here is how much of TeX's memory you used:
- 35336 strings out of 474878
- 763128 string characters out of 5762517
- 1941627 words of memory out of 5000000
+ 35334 strings out of 474878
+ 762880 string characters out of 5762517
+ 1940627 words of memory out of 5000000
  56488 multiletter control sequences out of 15000+600000
- 567830 words of font info for 146 fonts, out of 8000000 for 9000
+ 566131 words of font info for 134 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,19n,123p,3218b,1093s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slide01-basic.pdf (12 pages).
+Output written on slide01-basic.pdf (11 pages).
