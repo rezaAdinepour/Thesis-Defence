@@ -448,10 +448,9 @@ displaymathdigits=default % persian
 
 
 
-
-\section{مقدمه}
+\section{اهداف پژوهش}
 \begin{frame}
-	\frametitle{مقدمه}
+	\frametitle{اهداف پزوهش}
 	\textbf{چرا بلبرینگ؟}
 	
 	\setbeamercolor{alerted text}{fg=red}
@@ -482,15 +481,11 @@ displaymathdigits=default % persian
 		\begin{subfigure}[b]{0.4\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{img/img1.png}
-			\caption{$y=x$}
-			\label{fig:y equals x}
 		\end{subfigure}
 		\hspace{0cm}
 		\begin{subfigure}[b]{0.3\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{img/img2.png}
-			\caption{$y=3\sin x$}
-			\label{fig:three sin x}
 		\end{subfigure}
 		\hspace{0cm}
 	\end{figure}
@@ -514,7 +509,7 @@ displaymathdigits=default % persian
 		\begin{figure}
 			\vspace{0em}
 			\includegraphics[height=0.6\textheight]{img/img3.png}
-			\caption{بازه زمانی عمر سیستم}
+			\caption{بازه زمانی عمر سیستم \cite{lu2021gan}}
 		\end{figure}
 		
 		\begin{enumerate}
@@ -637,14 +632,14 @@ displaymathdigits=default % persian
 		\begin{subfigure}[b]{0.45\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{img/img4.png}
-			\caption{سیگنال ارتعاشات بلبرینگ}
+			\caption{سیگنال ارتعاشات بلبرینگ \cite{wei2024conditional}}
 			\label{سیگنال ارتعاشات بلبرینگ}
 		\end{subfigure}
 		\hspace{0cm}
 		\begin{subfigure}[b]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{img/img5.png}
-			\caption{تابع تخریب RUL}
+			\caption{تابع تخریب RUL \cite{wei2024conditional}}
 			\label{تابع تخریب RUL}
 		\end{subfigure}
 		\hspace{0cm}
@@ -678,8 +673,7 @@ displaymathdigits=default % persian
 
 \subsection{ساختار ترنسفرمر}
 \begin{frame}
-	\frametitle{ساختار ترنسفرمر}
-	
+	\frametitle{ساختار ترنسفرمر \cite{vaswani2017attention}}
 	
 	\begin{multicols}{2}
 		
@@ -737,20 +731,66 @@ displaymathdigits=default % persian
 % To adjust the paragraphs in RTL
 \everypar{\rightskip\rightmargin}
 %-------------------------------------------------------------------------------
-\section{مبانی}
-\subsection{متن ساده}
+\section{سابقه پژوهش}
 \begin{frame}
-
-این یک نمونه بسیار ساده از اسلاید است که با بیمر و زی‌پرشین ساخته شده‌است.
-
-از فونت آزاد Roya XB برای این اسلاید استفاده شده‌است. این فونت در اینترنت موجود است و باید روی کامپیوتر شما نصب شده باشد یا در فولدر قابل دسترس برای زی‌لاتک باشد
-
-تنظیمات اندکی در بخش آغازین برای اصلاح لیست‌ها و عنوان اسلایدها اضافه شده است. همچنین نحوه شماره‌گذاری تصاویر و جدول‌ها تنظیم شده‌است.
-
-بسیاری از تم‌های استاندارد بیمر با این الگو قابل استفاده است.
-
-استفاده از پانویس توصیه نمی شود. سفارش می‌شود که جدول فهرست مطالب به شکل دستی باشد. این اسلاید با بسیاری از تم‌های بیمر کار میکند اگرچه ممکن است اشکالاتی وجود داشته باشد.
+	
+	\begin{figure}
+		\vspace{0em}
+		\includegraphics[height=0.8\textheight]{img/img8.png}
+		\caption{خروجی‌های مقاله \cite{wei2024conditional} برای دیتاست FEMTO}
+	\end{figure}
 \end{frame}
+
+
+
+\begin{frame}
+	\begin{figure}
+		\vspace{0em}
+		\includegraphics[height=0.6\textheight]{img/img9.png}
+		\caption{خروجی‌های مقاله \cite{wei2024conditional} برای دیتاست XJTU-SY}
+	\end{figure}
+	
+%	\cite{zhang2023integrated}
+%	\cite{luo2022convolutional}
+%	\cite{lu2021gan}
+\end{frame}
+
+
+
+
+
+
+
+
+\section{منابع و مراجع}
+\begin{frame}[allowframebreaks,noframenumbering]
+	%    \frametitle{منابع}
+	%    \nocite{*} % to add all reference in bib
+	% \printbibliography
+	\begin{latin}
+		\bibliographystyle{unsrt-fa} % ieeetr-plain=unsrt
+		\scriptsize
+		\bibliography{./references}
+	\end{latin}
+	
+\end{frame}
+
+% \appendix
+\section[تشکر]{تشکر از توجه شما}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %-------------------------------------------------------------------------------
 %\section{لیست‌های بدون شماره و با شماره}
